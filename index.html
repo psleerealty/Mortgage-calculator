@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real Estate Tools</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      min-height: 100vh;
+      padding: 48px 16px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header .badge {
+      display: inline-block;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      border: 1px solid #bfdbfe;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #1a2e44;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      color: #6b7a8d;
+      font-size: 1rem;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9aabb8;
+      margin-bottom: 12px;
+      padding-left: 4px;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .tool-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      text-decoration: none;
+      transition: box-shadow 0.2s, transform 0.15s;
+      border: 1.5px solid transparent;
+    }
+
+    .tool-card:hover {
+      box-shadow: 0 6px 24px rgba(37,99,235,0.13);
+      transform: translateY(-2px);
+      border-color: #bfdbfe;
+    }
+
+    .tool-card.coming-soon {
+      opacity: 0.55;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .tool-icon {
+      font-size: 2rem;
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .icon-blue { background: #eff6ff; }
+    .icon-green { background: #f0fdf4; }
+    .icon-purple { background: #faf5ff; }
+    .icon-orange { background: #fff7ed; }
+
+    .tool-info { flex: 1; }
+
+    .tool-info h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a2e44;
+      margin-bottom: 3px;
+    }
+
+    .tool-info p {
+      font-size: 0.82rem;
+      color: #6b7a8d;
+      line-height: 1.4;
+    }
+
+    .tool-arrow {
+      color: #bfdbfe;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    .tag-new { background: #dcfce7; color: #16a34a; }
+    .tag-soon { background: #f1f5f9; color: #94a3b8; }
+
+    .footer {
+      text-align: center;
+      color: #9aabb8;
+      font-size: 0.78rem;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="badge">🏡 Team Resource Hub</div>
+      <h1>Real Estate Tools</h1>
+      <p>Internal calculators and resources for the team</p>
+    </div>
+
+    <div class="section-label">Calculators</div>
+    <div class="tools-grid">
+
+      <a href="mortgage-calculator.html" class="tool-card">
+        <div class="tool-icon icon-blue">🏠</div>
+        <div class="tool-info">
+          <h2>Mortgage Balance Calculator <span class="tag tag-new">New</span></h2>
+          <p>Estimate remaining balance, monthly payment, equity, and payoff date. Auto-fills historical rate from loan start date.</p>
+        </div>
+        <div class="tool-arrow">›</div>
+      </a>
+
+      <a href="net-sheet.html" class="tool-card coming-soon">
+        <div class="tool-icon icon-green">📋</div>
+        <div class="tool-info">
+          <h2>Seller Net Sheet <span class="tag tag-soon">Coming Soon</span></h2>
+          <p>Calculate seller proceeds after mortgage payoff, commissions, closing costs, and fees.</p>
+        </div>
+        <div class="tool-arrow">›</div>
+      </a>
+
+      <a href="cma-tool.html" class="tool-card coming-soon">
+        <div class="tool-icon icon-purple">📊</div>
+        <div class="tool-info">
+          <h2>CMA Estimator <span class="tag tag-soon">Coming Soon</span></h2>
+          <p>Quick comparable market analysis and suggested list price range.</p>
+        </div>
+        <div class="tool-arrow">›</div>
+      </a>
+
+      <a href="buyer-affordability.html" class="tool-card coming-soon">
+        <div class="tool-icon icon-orange">💰</div>
+        <div class="tool-info">
+          <h2>Buyer Affordability <span class="tag tag-soon">Coming Soon</span></h2>
+          <p>Estimate max purchase price based on income, debts, and down payment.</p>
+        </div>
+        <div class="tool-arrow">›</div>
+      </a>
+
+    </div>
+
+    <div class="footer">Internal use only &nbsp;·&nbsp; Updated June 2026</div>
+  </div>
+</body>
+</html>
